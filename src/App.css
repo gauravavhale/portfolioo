@@ -1,0 +1,159 @@
+
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #161513;
+  font-family: sans-serif;
+}
+
+.landing {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+.titleCard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardCover {
+  width: 16rem;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.card-img-top {
+  object-fit: cover;
+  height: 250px;
+}
+
+.title {
+  font-size: 30px;
+  font-weight: bolder;
+}
+
+.title .responsive-name {
+  display: inline;
+}
+
+.para {
+  text-align: center;
+}
+.para h5 {
+    font-size: 20px;
+    padding: 5px;
+}
+.socials{
+  justify-content: center;
+}
+.socialIcons:hover{
+  color: #feb02a;
+}
+.desc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.about {
+  background-color: #2e2d2b;
+  min-height: 40vh;
+  padding: 2rem 0;
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  width: 80%;
+}
+.skills{
+  transition: all 0.5s ease-in-out;
+}
+.skills:hover{
+  transform: scale(1.2);
+}
+.project{
+  min-height: 100vh;
+  display: flex;
+  padding: 2rem 0;;
+}
+
+.card {
+  border-radius: 20px;
+  transition: all 0.5s ease-in-out;
+}
+.card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 24px rgba(163, 161, 161, 0.3);
+}
+.card-img-top:hover {
+  transform: scale(1.02);
+  transition: all 0.5s ease-in-out;
+}
+.contact {
+  min-height: 40vh;
+  display: flex;
+  align-items: center;
+  padding: 2rem 0;
+}
+.socialIcon{
+    font-size: 25px;
+    color: #feb02a;
+}
+.socialIcon:hover{
+    color: rgb(232, 96, 96);
+}
+
+@media screen and (min-width: 768px) {
+  .cardCover {
+    width: 28rem;
+  }
+
+  .card-img-top {
+    height: 400px;
+  }
+
+  .title {
+    font-size: 50px;
+  }
+
+  .title .responsive-name {
+    display: block;
+  }
+
+  .para {
+    text-align: start;
+  }
+
+  .desc {
+    align-items: flex-start;
+  }
+
+  .titleCard {
+    justify-content: flex-end;
+  }
+  .socials{
+  justify-content: start;
+  }
+  .project {
+    min-height: 60vh;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .card.custom-medium {
+    max-width: 22rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1.5rem !important;
+  }
+  .card .custom-medium .card-img-top {
+    height: 220px;
+  }
+}
+
+
