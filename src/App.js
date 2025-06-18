@@ -9,7 +9,7 @@ const App = () => {
     <div className="container d-flex flex-column align-items-center justify-content-center">
   {/* <SplashCursor/> */}
   {/* Landing Section */}
-  <div className="landing row w-100 justify-content-center mb-5">
+  <div className="landing row w-100 justify-content-center pt-5 pb-5">
     <div className="titleCard col-12 col-md-6">
       <div className="card shadow cardCover">
         <img src="images/cv-image6.png" className="card-img-top" alt="Profile" />
