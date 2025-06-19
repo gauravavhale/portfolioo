@@ -7,7 +7,7 @@ import SplashCursor from './Components/SplashCursor/SplashCursor'
 const App = () => {
   return (
     <div className="container d-flex flex-column align-items-center justify-content-center">
-  {/* <SplashCursor/> */}
+  <SplashCursor/>
   {/* Landing Section */}
   <div className="landing row w-100 justify-content-center pt-5 pb-5">
     <div className="titleCard col-12 col-md-6">
@@ -17,8 +17,8 @@ const App = () => {
     </div>
     <div className="col-12 col-md-6 desc text-white">
       <div className=" title">Hi, I'm </div>
-      <h1 className="title text-danger">
-      <ReactTyped strings={['Gaurav', 'Web Developer' ,'Frontend Developer','Full Stack Developer']} typeSpeed={40} backSpeed={50} loop />
+      <h1 className="title" style={{color:'purple'}}>
+      <ReactTyped strings={['Gaurav', 'Web Developer' ,'Frontend Developer','Full Stack Developer']} typeSpeed={50} backSpeed={60} loop />
       </h1>
       <div className="para">
         <h5>I Code What You See.</h5>
@@ -64,7 +64,7 @@ const App = () => {
     <div className='col-12 col-md-4 mb-3'>
       <div className='card custom-medium text-white mt-1 mb-4 p-4' style={{background:'#161513', border:"5px solid #211f1c"}}>
         <div>
-          <img src="/images/ecommerce.png" style={{objectFit:"cover"}} className='card-img-top h-100 w-100' alt="Project 1" />
+          <img src="/images/ecommerce.png" style={{objectFit:"cover", borderRadius:"10px"}} className='card-img-top h-100 w-100' alt="Project 1" />
         </div>
         <div className='card-body'>
           <h4 className='card-title text-white'>E-Commerce Website</h4>
@@ -81,7 +81,7 @@ const App = () => {
     <div className='col-12 col-md-4 mb-3'>
       <div className='card custom-medium text-white mt-1 mb-4 p-4' style={{background:'#161513', border:"5px solid #211f1c"}}>
         <div>
-          <img src="/images/expenseTracker.png" style={{objectFit:"cover"}} className='card-img-top h-100 w-100' alt="Project 1" />
+          <img src="/images/expenseTracker.png" style={{objectFit:"cover", borderRadius:"10px"}} className='card-img-top h-100 w-100' alt="Project 1" />
         </div>
         <div className='card-body'>
           <h4 className='card-title text-white'>Expense Tracker</h4>
@@ -94,7 +94,7 @@ const App = () => {
     <div className='col-12 col-md-4  mb-3'>
       <div className='card custom-medium text-white mt-1 mb-4 p-4' style={{background:'#161513', border:"5px solid #211f1c"}}>
         <div>
-          <img src="/images/portfolio.png" style={{objectFit:"cover"}} className='card-img-top h-100 w-100' alt="Project 1" />
+          <img src="/images/portfolio.png" style={{objectFit:"cover", borderRadius:"10px"}} className='card-img-top h-100 w-100' alt="Project 1" />
         </div>
         <div className='card-body'>
           <h4 className='card-title text-white'>Portfolio Website</h4>
