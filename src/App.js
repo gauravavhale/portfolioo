@@ -7,7 +7,7 @@ import SplashCursor from './Components/SplashCursor/SplashCursor'
 const App = () => {
   return (
     <div className="container d-flex flex-column align-items-center justify-content-center">
-  <SplashCursor/>
+  {/* <SplashCursor/> */}
   {/* Landing Section */}
   <div className="landing row w-100 justify-content-center pt-5 pb-5">
     <div className="titleCard col-12 col-md-6">
@@ -17,7 +17,7 @@ const App = () => {
     </div>
     <div className="col-12 col-md-6 desc text-white">
       <div className=" title">Hi, I'm </div>
-      <h1 className="title" style={{color:'purple'}}>
+      <h1 className="title" style={{color:'#ffc107'}}>
       <ReactTyped strings={['Gaurav', 'Web Developer' ,'Frontend Developer','Full Stack Developer']} typeSpeed={50} backSpeed={60} loop />
       </h1>
       <div className="para">
@@ -33,7 +33,7 @@ const App = () => {
       </div>
 
       <div className="d-flex gap-3 mt-4">
-        <a className='btn' href='/assets/resume/Gaurav_Avhale_Resume.pdf' download='Gaurav_Avhale_Resume.pdf' style={{background:'#feb02a'}}><b>Resume <i className='bi bi-download'></i></b></a>
+        <a className='btn' href='/assets/resume/Gaurav_Avhale_Resume.pdf' download='Gaurav_Avhale_Resume.pdf' style={{background:'#ffc107'}}><b>Resume <i className='bi bi-download'></i></b></a>
       </div>
     </div>
   </div>
@@ -119,7 +119,7 @@ const App = () => {
            I’m always open to new ideas, creative collaboration, or a quick tech chat.
            Drop me a message anytime, I’ll get back to you as soon as I can.
            Let’s connect and make something awesome happen!</p>
-        <button className='btn btn-warning mt-4' onClick={() => window.location.href = 'mailto:avhalegaurav07@gmail.com'}><small>Contact Me</small></button>
+        <button className='btn mt-4' style={{background:'#ffc107'}} onClick={() => window.location.href = 'mailto:avhalegaurav07@gmail.com'}><small>Contact Me</small></button>
       </div>
 
     <div className='row'>   
