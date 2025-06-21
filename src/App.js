@@ -66,7 +66,7 @@ const App = () => {
         <div>
           <img src="/images/ecommerce.png" style={{objectFit:"cover", borderRadius:"10px"}} className='card-img-top h-100 w-100' alt="Project 1" />
         </div>
-        <div className='card-body'>
+        <div className='card-body ps-0 pe-0'>
           <h4 className='card-title text-white'>E-Commerce Website</h4>
           <p>A Complete e-commerce platform built with
           React, allowing users to browse products,
@@ -83,7 +83,7 @@ const App = () => {
         <div>
           <img src="/images/expenseTracker.png" style={{objectFit:"cover", borderRadius:"10px"}} className='card-img-top h-100 w-100' alt="Project 1" />
         </div>
-        <div className='card-body'>
+        <div className='card-body ps-0 pe-0'>
           <h4 className='card-title text-white'>Expense Tracker</h4>
           <p>A Expensive-Tracker application that helps users manage and monitor their daily expenses. Build with React and local storage for persistant state, and a user-friendly interface.</p>
            <a href='' target='__blank' className='text-warning text-decoration-none'><i className='bi bi-link-45deg'></i> View Project</a>
@@ -96,7 +96,7 @@ const App = () => {
         <div>
           <img src="/images/portfolio.png" style={{objectFit:"cover", borderRadius:"10px"}} className='card-img-top h-100 w-100' alt="Project 1" />
         </div>
-        <div className='card-body'>
+        <div className='card-body ps-0 pe-0'>
           <h4 className='card-title text-white'>Portfolio Website</h4>
           <p>A fully responsive portfolio website crafted with React, Next.js, and Framer Motion. Features include smooth animations, modern UI/UX design, and optimized performance for fast load times.</p>
            <a href='https://portfolio-gaurav-avhales-projects.vercel.app/' target='__blank' className='text-warning text-decoration-none'><i className='bi bi-link-45deg'></i> View Project</a>
