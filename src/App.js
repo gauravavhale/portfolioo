@@ -18,7 +18,7 @@ const App = () => {
     <div className="col-12 col-md-6 desc text-white">
       <div className=" title">Hi, I'm </div>
       <h1 className="title" style={{color:'#ffc107'}}>
-      <ReactTyped strings={['Gaurav', 'Web Developer' ,'Frontend Developer','Full Stack Developer']} typeSpeed={50} backSpeed={60} loop />
+      <ReactTyped strings={['Gaurav','Frontend Developer','Full Stack Developer']} typeSpeed={50} backSpeed={60} loop />
       </h1>
       <div className="para">
         <h5>I Code What You See.</h5>
@@ -43,14 +43,14 @@ const App = () => {
     <div className="col-12 col-md-6 text-white p-3">
       <h4 className='text-center mb-4' style={{color:'#ffc107'}}>Hire me as a developer</h4>
       <small className='text-center d-block'>
-        "Hi! I’m a frontend developer who loves turning ideas into clean, responsive websites. I work with React, Next.js, JavaScript, and CSS to build smooth, user-friendly web experiences."<br/>
+        "Hi! I’m a Fullstack developer who loves turning ideas into clean, responsive websites. I work with React, Next.js, JavaScript, and CSS to build smooth, user-friendly web experiences."<br/>
         "My journey started with a simple curiosity for how things work on the web and grew into a passion for crafting dynamic, visually appealing interfaces that feel great to use."
       </small>
     </div>
     <div className="col-12 col-md-6 text-white p-3">
       <h4 className="text-center mb-4" style={{color:"#ffc107"}}>Expertise</h4>
       <div className="d-flex flex-wrap gap-3 justify-content-center">
-        {['HTML', 'CSS', 'Javascript', 'ReactJs', 'NextJs', 'Bootstrap', 'Responsive Design' ,'Redux', 'jQuery' , 'Ajax', 'UI/UX' , 'NodeJs', 'MongoDb'].map(skill => (
+        {['HTML', 'CSS', 'Javascript', 'ReactJs', 'NextJs', 'Bootstrap', 'Responsive Design' ,'Redux', 'jQuery' , 'Ajax', 'JWT' , 'NodeJs', 'MongoDb'].map(skill => (
           <small key={skill} className="skills bg-dark px-2 py-1 rounded text-sm">{skill}</small>
         ))}
       </div>
