@@ -68,11 +68,17 @@ const App = () => {
         </div>
         <div className='card-body ps-0 pe-0'>
           <h4 className='card-title text-white'>E-Commerce Website</h4>
-          <p>A Complete e-commerce platform built with
+          <p>A full-stack e-commerce web application built 
+            with React, Next.js, Redux, Express, Node.js, JWT, 
+            and MongoDB. This project demonstrates my skills 
+            in full-stack development, API design, secure authentication,
+            and state management.
+          </p>
+          {/* <p>A Complete e-commerce platform built with
           React, allowing users to browse products,
           add items to cart. This project demonstrates
           my abilities in frontend development
-          and state management</p>
+          and state management</p> */}
            <a href='https://swift-cart-gaurav-avhales-projects.vercel.app/' target='__blank' className='text-warning text-decoration-none'><i className='bi bi-link-45deg'></i> View Project</a>
         </div>
       </div>
