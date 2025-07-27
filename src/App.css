@@ -1,6 +1,10 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
 
 html,body {
   overflow: auto;
+  scrollbar-gutter: stable;
   scrollbar-width: none;
   margin: 0;
   padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
@@ -74,7 +78,7 @@ body::-webkit-scrollbar{
   display: flex;
   align-items: center;
   border-radius: 20px;
-  width: 80%;
+  width: 100%;
 }
 .skills{
   transition: all 0.5s ease-in-out;
