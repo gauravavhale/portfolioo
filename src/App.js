@@ -79,7 +79,7 @@ const App = () => {
       ].map(skill => (
         <span
           key={skill}
-          className="skills px-3 py-1 rounded"
+          className="skills px-3 py-2 rounded"
           style={{
             background: '#212529',
             border: '1px solid #3c3b39',
