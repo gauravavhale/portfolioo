@@ -2,18 +2,30 @@ import React from 'react'
 import { ReactTyped } from 'react-typed'
 import './App.css'
 import {ScrollingTechBar} from './Components/ScrollingTechBar/ScrollingTechBar'
-import SplashCursor from './Components/SplashCursor/SplashCursor'
 
 const App = () => {
   return (
     <div className="container d-flex flex-column align-items-center justify-content-center">
-  {/* <SplashCursor/> */}
+
   {/* Landing Section */}
   <div className="landing row w-100 justify-content-center pt-5 pb-5">
     <div className="titleCard col-12 col-md-6">
-      <div className="card shadow cardCover">
-        <img src="images/cv-image6.png" className="card-img-top" alt="Profile" />
-      </div>
+      <div className="card shadow cardCover border-0" style={{ borderRadius: '20px', overflow: 'hidden' }}>
+  <img
+    src="/images/cv-image6.png"
+    className="card-img-top"
+    alt="Profile"
+    style={{
+      objectFit: 'cover',
+      width: '100%',
+      height: 'auto',
+      transition: 'transform 0.3s ease',
+    }}
+    onMouseOver={(e) => (e.currentTarget.style.transform = 'scale(1.05)')}
+    onMouseOut={(e) => (e.currentTarget.style.transform = 'scale(1)')}
+  />
+</div>
+
     </div>
     <div className="col-12 col-md-6 desc text-white">
       <div className=" title">Hi, I'm </div>
@@ -40,93 +52,147 @@ const App = () => {
 
   {/* About Section */}
   <div className="about row justify-content-center">
-    <div className="col-12 col-md-6 text-white p-3">
-      <h4 className='text-center mb-4' style={{color:'#ffc107'}}>Hire me as a developer</h4>
-      <small className='text-center d-block'>
-        "Hi! I’m a Fullstack developer who loves turning ideas into clean, responsive websites. I work with React, Next.js, JavaScript, and CSS to build smooth, user-friendly web experiences."<br/>
-        "My journey started with a simple curiosity for how things work on the web and grew into a passion for crafting dynamic, visually appealing interfaces that feel great to use."
-      </small>
-    </div>
-    <div className="col-12 col-md-6 text-white p-3">
-      <h4 className="text-center mb-4" style={{color:"#ffc107"}}>Expertise</h4>
-      <div className="d-flex flex-wrap gap-3 justify-content-center">
-        {['HTML', 'CSS', 'Javascript', 'ReactJs', 'NextJs', 'Bootstrap', 'Responsive Design' ,'Redux', 'jQuery' , 'Ajax', 'JWT' , 'NodeJs', 'MongoDb'].map(skill => (
-          <small key={skill} className="skills bg-dark px-2 py-1 rounded text-sm">{skill}</small>
-        ))}
-      </div>
+  {/* Left Column – About Me */}
+  <div className="col-12 col-md-6 text-white p-3">
+    <h4 className="text-center mb-4" style={{ color: '#ffc107', fontWeight: 600 }}>
+      Hire Me as a Developer
+    </h4>
+    <p className="text-center" style={{ fontSize: '0.95rem', lineHeight: '1.6' }}>
+      Hi! I’m a <strong>Full-Stack Developer</strong> who transforms ideas into
+      clean, responsive, and user-friendly web experiences. I specialize in
+      <strong> React</strong>, <strong>Next.js</strong>, <strong>JavaScript</strong>, and <strong>CSS</strong> to build modern,
+      intuitive interfaces.<br /><br />
+      My journey began with a simple curiosity for how websites work — and has grown into a deep
+      passion for creating dynamic, accessible, and beautiful digital products that feel great to use.
+    </p>
+  </div>
+
+  {/* Right Column – Skills */}
+  <div className="col-12 col-md-6 text-white p-3">
+    <h4 className="text-center mb-4" style={{ color: "#ffc107", fontWeight: 600 }}>
+      Expertise
+    </h4>
+    <div className="d-flex flex-wrap gap-3 justify-content-center">
+      {[
+        'HTML', 'Tailwind CSS', 'JavaScript', 'React.js', 'Next.js', 'Bootstrap',
+        'Responsive Design', 'Redux', 'jQuery', 'AJAX', 'JWT', 'RestAPI' , 'GraphQl' , 'Node.js', 'MongoDB'
+      ].map(skill => (
+        <span
+          key={skill}
+          className="skills px-3 py-1 rounded"
+          style={{
+            background: '#212529',
+            border: '1px solid #3c3b39',
+            fontSize: '0.85rem',
+            color: '#fff'
+          }}
+        >
+          {skill}
+        </span>
+      ))}
     </div>
   </div>
+</div>
+
 
   {/* Projects Section */}
   <div className='project row w-100 mt-4'>
-    <h2 className=' text-center p-0 m-0 mb-5' style={{color:'#ffc107'}}>Projects</h2>
+  <h2 className='text-center mb-5' style={{ color: '#ffc107', fontWeight: 600 }}>
+      Things I’ve Built
+  </h2>
 
-    <div className='col-12 col-md-4 mb-3'>
-      <div className='card custom-medium text-white mt-1 mb-4 p-4' style={{background:'#161513', border:"5px solid #211f1c"}}>
-        <div>
-          <img src="/images/ecommerce.png" style={{objectFit:"cover", borderRadius:"10px"}} className='card-img-top h-100 w-100' alt="Project 1" />
-        </div>
-        <div className='card-body ps-0 pe-0'>
-          <h4 className='card-title text-white'>E-Commerce Website</h4>
-          <p>A full-stack e-commerce web application built 
-            with React, Next.js, Redux, Express, Node.js, JWT, 
-            and MongoDB. This project demonstrates my skills 
-            in full-stack development, API design, secure authentication,
-            and state management.
-          </p>
-          {/* <p>A Complete e-commerce platform built with
-          React, allowing users to browse products,
-          add items to cart. This project demonstrates
-          my abilities in frontend development
-          and state management</p> */}
-           <a href='https://swift-cart-gaurav-avhales-projects.vercel.app/' target='__blank' className='text-warning text-decoration-none'><i className='bi bi-link-45deg'></i> View Project</a>
+
+  {[{
+    title: "E-Commerce Website",
+    desc: "A full-stack e-commerce web application built with React, Next.js, Redux, Express, Node.js, JWT, and MongoDB. It demonstrates my full-stack skills, API integration, authentication, and state management.",
+    img: "/images/ecommerce.png",
+    link: "https://swift-cart-gaurav-avhales-projects.vercel.app/"
+  }, {
+    title: "Personal Blog",
+    desc: "A modern, fully responsive blog platform built with Next.js App Router and Tailwind CSS. I use this space to share insights on web development, my journey, and life experiences.",
+    img: "/images/gaurav.blog.png",
+    link: "https://gauravblog-iota.vercel.app/"
+  }, {
+    title: "Portfolio Website",
+    desc: "A fully responsive portfolio website built with React, Next.js, and Framer Motion. Features smooth animations, a modern design system, and great performance.",
+    img: "/images/portfolio.png",
+    link: "https://portfolio-gaurav-avhales-projects.vercel.app/"
+  }].map((project, i) => (
+    <div key={i} className='col-12 col-md-4 mb-4'>
+      <div className='card text-white h-100 p-3 shadow'
+        style={{
+          background: '#161513',
+          border: '2px solid #2c2a27',
+          borderRadius: '12px',
+          transition: 'transform 0.3s ease, box-shadow 0.3s ease'
+        }}
+        onMouseEnter={e => {
+          e.currentTarget.style.transform = 'translateY(-5px)';
+          e.currentTarget.style.boxShadow = '0 8px 24px rgba(255, 193, 7, 0.2)';
+        }}
+        onMouseLeave={e => {
+          e.currentTarget.style.transform = 'translateY(0)';
+          e.currentTarget.style.boxShadow = 'none';
+        }}
+      >
+        <img src={project.img} className='card-img-top mb-3 rounded' alt={project.title} style={{ objectFit: 'cover', height: '200px' }} />
+        <div className='card-body px-0'>
+          <h4 className='card-title mb-2' style={{ color: '#ffc107' }}>{project.title}</h4>
+          <p style={{ fontSize: '0.95rem', lineHeight: '1.5' }}>{project.desc}</p>
+          <a
+            href={project.link}
+            target='_blank'
+            rel='noopener noreferrer'
+            className='btn btn-sm mt-3 text-dark fw-semibold'
+            style={{
+              backgroundColor: '#ffc107',
+              borderRadius: '6px',
+              display: 'inline-flex',
+              alignItems: 'center'
+            }}
+          >
+            <i className='bi bi-link-45deg me-1'></i> View Project
+          </a>
         </div>
       </div>
     </div>
+  ))}
+</div>
 
-    <div className='col-12 col-md-4 mb-3'>
-      <div className='card custom-medium text-white mt-1 mb-4 p-4' style={{background:'#161513', border:"5px solid #211f1c"}}>
-        <div>
-          <img src="/images/expenseTracker.png" style={{objectFit:"cover", borderRadius:"10px"}} className='card-img-top h-100 w-100' alt="Project 1" />
-        </div>
-        <div className='card-body ps-0 pe-0'>
-          <h4 className='card-title text-white'>Expense Tracker</h4>
-          <p>A Expensive-Tracker application that helps users manage and monitor their daily expenses. Build with React and local storage for persistant state, and a user-friendly interface.</p>
-           <a href='' target='__blank' className='text-warning text-decoration-none'><i className='bi bi-link-45deg'></i> View Project</a>
-        </div>
-      </div>
-    </div>
-
-    <div className='col-12 col-md-4  mb-3'>
-      <div className='card custom-medium text-white mt-1 mb-4 p-4' style={{background:'#161513', border:"5px solid #211f1c"}}>
-        <div>
-          <img src="/images/portfolio.png" style={{objectFit:"cover", borderRadius:"10px"}} className='card-img-top h-100 w-100' alt="Project 1" />
-        </div>
-        <div className='card-body ps-0 pe-0'>
-          <h4 className='card-title text-white'>Portfolio Website</h4>
-          <p>A fully responsive portfolio website crafted with React, Next.js, and Framer Motion. Features include smooth animations, modern UI/UX design, and optimized performance for fast load times.</p>
-           <a href='https://portfolio-gaurav-avhales-projects.vercel.app/' target='__blank' className='text-warning text-decoration-none'><i className='bi bi-link-45deg'></i> View Project</a>
-        </div>
-      </div>
-    </div>
-
-    
-  </div>
 
   <div className='row w-100 contact'>
     <div>
 
       <ScrollingTechBar/>
 
-      <div className='contact-card border-2 flex-column p-4 justify-content-center align-content-center text-center text-white' style={{minHeight:"350px", background:"#2e2d2b", borderRadius:"10px"}}>
-        <h1 className='mb-4'>Get in Touch</h1>
-        <p>Let's Build Something Great Together!
-           Whether you have a project in mind, a job opportunity, or just want to say hello, I’d love to hear from you.<br/>
-           I’m always open to new ideas, creative collaboration, or a quick tech chat.
-           Drop me a message anytime, I’ll get back to you as soon as I can.
-           Let’s connect and make something awesome happen!</p>
-        <button className='btn mt-4' style={{background:'#ffc107'}} onClick={() => window.location.href = 'mailto:avhalegaurav07@gmail.com'}><small>Contact Me</small></button>
+      <div className='contact-card border-2 d-flex flex-column p-4 justify-content-center align-items-center text-center text-white'
+       style={{
+              minHeight: "380px",
+              background: "#2e2d2b",
+              borderRadius: "12px",
+              borderColor: "#ffc107",
+              boxShadow: "0 0 12px rgba(255, 193, 7, 0.2)"}}>
+        <h1 className='mb-4' style={{ fontWeight: 600 }}>Get in Touch</h1>
+        <p style={{ maxWidth: "700px", lineHeight: "1.6" }}>
+          🚀 Let's build something <strong>impactful</strong> together!
+          Whether you’ve got a project idea, a job opportunity, or just want to say hello — I’d love to hear from you.
+          <br /><br />
+          I'm always open to <strong>creative collaborations</strong>, <strong>freelance gigs</strong>, or just a quick tech chat ☕.<br/>
+          If you believe we can create something meaningful together, don’t hesitate to reach out.
+          <br /><br />
+          I usually respond within a day. Let’s connect and make something awesome happen!
+        </p>
+
+      <button
+      className='btn mt-4 px-4 py-2 text-dark'
+      style={{ background: '#ffc107', borderRadius: '6px', fontWeight: 500 }}
+      onClick={() => window.location.href = 'mailto:avhalegaurav07@gmail.com'}
+      >
+      <i className="bi bi-envelope-fill me-2"></i>
+          Contact Me
+      </button>
       </div>
+
 
     <div className='row'>   
       <div className='col-12 col-md-6 d-flex justify-content-center align-items-center gap-4 mt-4'>
