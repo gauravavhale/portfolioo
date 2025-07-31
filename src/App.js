@@ -113,10 +113,10 @@ const App = () => {
     img: "/images/gaurav.blog.png",
     link: "https://gauravblog-iota.vercel.app/"
   }, {
-    title: "Portfolio Website",
-    desc: "A fully responsive portfolio website built with React, Next.js, and Framer Motion. Features smooth animations, a modern design system, and great performance.",
-    img: "/images/portfolio.png",
-    link: "https://portfolio-gaurav-avhales-projects.vercel.app/"
+    title: "🌍 Wanderlust Travel Hub",
+    desc: "A sleek, responsive travel booking website showcasing top destinations, travel packages, and seamless navigation for an inspiring user experience. Built with Next.js and Tailwind CSS.",
+    img: "/images/wanderlust.png",
+    link: "https://wanderlusttravelhub.vercel.app/"
   }].map((project, i) => (
     <div key={i} className='col-12 col-md-4 mb-4'>
       <div className='card text-white h-100 p-3 shadow'
