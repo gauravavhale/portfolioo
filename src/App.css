@@ -1,14 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
 body {
   margin: 0;
-  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+  padding: env(safe-area-inset);
   box-sizing: border-box;
-  background-color:black;
-  font-family: sans-serif;
+  background: linear-gradient(135deg, #0a0a0a, #1a1a1a);
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  scroll-behavior: smooth;
 }
 
+/* Landing Section */
 .landing {
-  min-height: 100dvh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   padding: 2rem 0;
@@ -24,35 +28,49 @@ body {
   width: 16rem;
   border-radius: 20px;
   overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  transition: transform 0.4s ease;
+}
+.cardCover:hover {
+  transform: scale(1.05);
 }
 
 .card-img-top {
   object-fit: cover;
   height: 250px;
+  transition: transform 0.4s ease;
 }
 
 .title {
   font-size: 30px;
-  font-weight: bolder;
-}
-
-.title .responsive-name {
-  display: inline;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 1px;
 }
 
 .para {
   text-align: center;
 }
 .para h5 {
-    font-size: 20px;
-    padding: 5px;
+  font-size: 18px;
+  font-weight: 400;
+  opacity: 0.9;
+  margin: 6px 0;
 }
-.socials{
+
+.socials {
   justify-content: center;
+  gap: 20px;
 }
-.socialIcons:hover{
-  color: #feb02a;
+.socialIcons {
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
+.socialIcons:hover {
+  color: #ffc107;
+  transform: translateY(-3px);
+}
+
 .desc {
   display: flex;
   flex-direction: column;
@@ -60,100 +78,111 @@ body {
   justify-content: center;
 }
 
+/* About Section */
 .about {
-  background-color: #2e2d2b;
-  min-height: 40dvh;
-  padding: 2rem 0;
-  display: flex;
-  align-items: center;
-  border-radius: 20px;
-  width: 80%;
+  background: rgba(46, 45, 43, 0.9);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  padding: 2.5rem;
+  margin-top: 2rem;
+  width: 90%;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
 }
-.skills{
-  transition: all 0.5s ease-in-out;
+
+.skills {
+  background: #212529;
+  border: 1px solid #3c3b39;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  transition: transform 0.3s ease, background 0.3s ease;
 }
-.skills:hover{
-  transform: scale(1.2);
+.skills:hover {
+  transform: scale(1.15);
+  background: #ffc107;
+  color: #121212;
 }
-.project{
-  min-height: 100dvh;
-  display: flex;
-  padding: 2rem 0;;
+
+/* Project Section */
+.project {
+  padding: 4rem 0;
+}
+.project h2 {
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 .card {
-  border-radius: 20px;
-  transition: all 0.5s ease-in-out;
+  border-radius: 16px;
+  transition: all 0.4s ease;
+  background: #161513;
 }
-
 .card:hover {
-  transform: scale(1.02);
-  box-shadow: 0 4px 24px rgba(163, 161, 161, 0.3);
+  transform: translateY(-6px);
+  box-shadow: 0 6px 24px rgba(255, 193, 7, 0.25);
 }
-.card-img-top:hover {
-  transform: scale(1.02);
-  transition: all 0.5s ease-in-out;
-}
-.contact {
-  min-height: 40dvh;
-  display: flex;
-  align-items: center;
-  padding: 2rem 0;
-}
-.socialIcon{
-    font-size: 25px;
-    color: #feb02a;
-}
-.socialIcon:hover{
-    color: rgb(232, 96, 96);
+.card-img-top {
+  height: 220px;
+  border-radius: 10px;
+  object-fit: cover;
 }
 
-@media screen and (min-width: 768px) {
+/* Contact Section */
+.contact-card {
+  margin-top: 3rem;
+  text-align: center;
+  padding: 2.5rem;
+  border-radius: 12px;
+  transition: all 0.4s ease;
+}
+.contact-card h1 {
+  font-size: 2rem;
+  color: #ffc107;
+}
+.contact-card p {
+  font-size: 1rem;
+  opacity: 0.85;
+}
+
+.socialIcon {
+  font-size: 28px;
+  color: #ffc107;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.socialIcon:hover {
+  color: #ff5252;
+  transform: scale(1.2);
+}
+
+/* Buttons */
+.btn {
+  transition: all 0.3s ease;
+}
+.btn:hover {
+  transform: translateY(-3px);
+  background: #ffcd39 !important;
+}
+
+/* Responsive Tweaks */
+@media (min-width: 768px) {
   .cardCover {
     width: 28rem;
   }
-
   .card-img-top {
     height: 400px;
   }
-
   .title {
-    font-size: 50px;
+    font-size: 48px;
+    text-align: left;
   }
-
-  .title .responsive-name {
-    display: block;
-  }
-
   .para {
-    text-align: start;
+    text-align: left;
   }
-
   .desc {
     align-items: flex-start;
   }
-
-  .titleCard {
-    justify-content: flex-end;
-  }
-  .socials{
-  justify-content: start;
-  }
-  .project {
-    min-height: 60dvh;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-  }
-  .card.custom-medium {
-    max-width: 22rem;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 1.5rem !important;
-  }
-  .card .custom-medium .card-img-top {
-    height: 220px;
+  .socials {
+    justify-content: flex-start;
   }
 }
-
-

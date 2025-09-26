@@ -103,10 +103,10 @@ const App = () => {
 
 
   {[{
-    title: "E-Commerce Website",
-    desc: "A full-stack e-commerce web application built with React, Next.js, Redux, Express, Node.js, JWT, and MongoDB. It demonstrates my full-stack skills, API integration, authentication, and state management.",
-    img: "/images/ecommerce.png",
-    link: "https://swift-cart-gaurav-avhales-projects.vercel.app/"
+  title: "Urban Pick",
+  desc: "An online platform built with modern web technologies to showcase and manage products efficiently. It highlights my skills in building scalable, responsive, and user-friendly web applications.",
+  img: "/images/urbanpick.png",
+  link: "https://urban-pick.vercel.app/"
   }, {
     title: "Personal Blog",
     desc: "A modern, fully responsive blog platform built with Next.js App Router and Tailwind CSS. I use this space to share insights on web development, my journey, and life experiences.",
@@ -194,7 +194,7 @@ const App = () => {
       </div>
 
 
-    <div className='row'>   
+    <div className='row pb-2'>   
       <div className='col-12 col-md-6 d-flex justify-content-center align-items-center gap-4 mt-4'>
         <span onClick={()=> window.location.href = 'https://www.linkedin.com/in/gaurav-avhale-631690313/'} className='bi bi-linkedin socialIcon'></span>
         <span onClick={()=> window.location.href = 'https://www.instagram.com/gaurav.avhale_18?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=='} className='bi bi-instagram socialIcon'></span>
